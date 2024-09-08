@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>codes.rafael.documentsql</groupId>
   <artifactId>document-sql</artifactId>
-  <version>1.4-SNAPSHOT</version>
+  <version>1.4</version>
   <packaging>pom</packaging>
   <name>SQL generator for document descriptions</name>
   <description>This library attempts to bridge the gap between the flexibility of document storage and the comfort of SQL schemata. Typically, XML and JSON documents follow a schema, this library
@@ -21,7 +21,7 @@
     <connection>scm:git:git://github.com/raphw/skatteprosessen-document-sql.git</connection>
     <developerConnection>scm:git:git@github.com:raphw/skatteprosessen-document-sql.git</developerConnection>
     <url>http://github.com/raphw/skatteprosessen-document-sql/tree/master</url>
-    <tag>document-sql-1.3</tag>
+    <tag>document-sql-1.4</tag>
   </scm>
   <developers>
     <developer>
