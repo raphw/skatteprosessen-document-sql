@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.documentsql</groupId>
+  <groupId>codes.rafael.documentsql</groupId>
   <artifactId>document-sql</artifactId>
-  <version>0-SNAPSHOT</version>
+  <version>1.4-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <name>SQL generator for document descriptions</name>
+  <description>This library attempts to bridge the gap between the flexibility of document storage and the comfort of SQL schemata. Typically, XML and JSON documents follow a schema, this library
+    creates DDL to represent these schemata as SQL views of a stored document. A schema is generated from its Java class representation and written to DDL.
+  </description>
+  <url>https://github.com/raphw/skatteprosessen-document-sql</url>
+  <distributionManagement>
+    <repository>
+      <id>central</id>
+      <name>Nexus Release Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+  </distributionManagement>
+  <scm>
+    <connection>scm:git:git://github.com/raphw/skatteprosessen-document-sql.git</connection>
+    <developerConnection>scm:git:git@github.com:raphw/skatteprosessen-document-sql.git</developerConnection>
+    <url>http://github.com/raphw/skatteprosessen-document-sql/tree/master</url>
+    <tag>document-sql-1.3</tag>
+  </scm>
+  <developers>
+    <developer>
+      <name>Rafael Winterhalter</name>
+      <email>rafael.wth@gmail.com</email>
+      <organization>Skatteetaten</organization>
+      <organizationUrl>https://rafael.codes</organizationUrl>
+    </developer>
+  </developers>
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <sonar.jacoco.reportPath>${project.build.directory}/jacoco.exec</sonar.jacoco.reportPath>
@@ -53,6 +79,20 @@
             <id>agent</id>
             <goals>
               <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
             </goals>
           </execution>
         </executions>

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>document-sql</artifactId>
-        <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.documentsql</groupId>
-        <version>0-SNAPSHOT</version>
+        <groupId>codes.rafael.documentsql</groupId>
+        <version>1.4-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>no.skatteetaten.fastsetting.formueinntekt.felles.documentsql</groupId>
+            <groupId>codes.rafael.documentsql</groupId>
             <artifactId>document-sql-api</artifactId>
             <version>${project.version}</version>
         </dependency>
